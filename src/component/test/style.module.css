@@ -1,0 +1,27 @@
+.reg{
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    max-width: 200px;
+    margin: auto;
+    padding: 20px;
+    border: 5px solid blue;
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+.wind{
+    border: 1px solid;
+    border-radius: 5px;
+    width: 200px;
+    height: 20px;
+}
+.but{
+    background-color: rgb(52, 52, 240);
+    margin: 30px;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.h{
+    margin: 30px;
+}
