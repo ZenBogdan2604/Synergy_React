@@ -1,13 +1,12 @@
-//import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
-import TestApi from "./component/check/test-api.jsx";
-import Test from "./component/test";
+import Test from "./components/test";
 
 function App() {
   return (
-    <div>
-      <Test/>
-    </div>  
+    <div className="App">
+      <Test />
+    </div>
   );
 }
 
