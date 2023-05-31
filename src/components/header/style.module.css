@@ -1,0 +1,15 @@
+.container{
+    background-color: burlywood;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list{
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+    list-style: none;
+    padding: 0;
+}

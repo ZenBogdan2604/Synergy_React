@@ -1,0 +1,11 @@
+.container {
+    background-color: orangered;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label_team {
+    font-size: 55px;
+}
