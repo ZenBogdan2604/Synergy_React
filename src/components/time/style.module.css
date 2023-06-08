@@ -1,5 +1,5 @@
 .container {
-    background-color: rgb(245, 8, 233);
+    background-color: orange;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -9,4 +9,3 @@
 .label_time{
     font-size: 55px;
 }
-

@@ -1,9 +1,30 @@
+import { useState } from 'react';
 import styles from './style.module.css'
+import { useLocalStorage } from '../../hook/useLocalStorage';
 
 const Home = () => {
+const [user, setUser] = useLocalStorage("USER");
+const [inputValue, setInputValue] = useState("");
+
     return (
         <div className={styles.container}>
-            Моя страница, мой аккаунт - это мой дом, поэтому будь добр, заходи в него с благими намерениями либо уходи, одно из двух, выбор за тобой
+            {user && (
+                <div>
+                <div>Greetings {user}</div>
+                <button onClick={() => setUser("")}>Exit</button>
+                </div>
+            )}
+
+            {!user && (
+                <div>
+                    <label>Enter your name</label>
+                    <input 
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    />
+                    <button onClick={() => setUser(inputValue)}>Save</button>
+                </div>
+            )}
         </div>
     );
 };

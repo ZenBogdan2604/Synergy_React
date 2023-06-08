@@ -1,5 +1,5 @@
 .container{
-    background-color: burlywood;
+    background-color: rgb(50, 177, 209);
     height: 60px;
     display: flex;
     justify-content: center;
@@ -9,7 +9,18 @@
 .list{
     display: flex;
     justify-content: space-around;
-    width: 600px;
+    width: 900px;
     list-style: none;
     padding: 0;
+}
+
+.decor{
+    text-decoration: none;
+    color: black;
+    padding: 19px; 
+    font-size: large;
+    color: rgb(255, 255, 255);
+}
+.decor:hover {
+    color: #2bff00; 
 }

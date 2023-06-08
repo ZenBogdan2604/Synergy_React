@@ -1,12 +1,23 @@
 import styles from './style.module.css'
+import React, { useState, useEffect } from 'react';
 
-const Time = () => {
+function Time() {
+  const [now, setNow] = useState(new Date());
 
-    return (
-        <div className={styles.container}>
-        <div className={styles.label_time}>{new Date().toLocaleTimeString()}</div>
-        </div>
-    )
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setNow(new Date());
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  return (
+    <div className={styles.container}>
+      <h1>Current time:</h1>
+      <p className={styles.label_time}>{now.toLocaleTimeString()}</p>
+    </div>
+  );
 }
 
 export default Time;

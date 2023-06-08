@@ -1,5 +1,4 @@
 import { Route, Switch } from "react-router-dom";
-import Work from "../work";
 import About from "../about";
 import Test from "../test";
 import Home from "../home";
@@ -11,7 +10,6 @@ const Main = () => {
     <div>
 <Switch>
 <Route path='/home' component={Home}/>
-<Route path='/work' component={Work}/>
 <Route path='/test' component={Test}/>
 <Route path='/about-me' component={About}/>
 <Route path='/heaven' component={Rule}/>

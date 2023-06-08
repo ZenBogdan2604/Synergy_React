@@ -1,23 +1,32 @@
+import { useState } from 'react';
 import styles from './style.module.css'
+import { useLocalStorage } from '../../hook/useLocalStorage';
 
 const Rule = () => {
+    const [user, setUser] = useLocalStorage("USER");
+    const [name, setName] = useState('');
+    const [food, setFood] = useLocalStorage("FOOD")
+
     return (
-        <div className={styles.container}>
-            <p>Тебе понадобится друг, которому ты сможешь довериться. Он должен быть способен контролировать свои желания.<br/>
-                Он не должен быть заинтересован в получении власти, славы, богатства и должен избрать волю Бога выше закона людей<br/>
+        <form className={styles.container}>
+            {food && (
+                <div>
+                <div>Now i know it</div>
+                <button onClick={() => setFood("")}>Exit</button>
+                </div>
+            )}
 
-Так же понадобятся жизни 36 грешников, ибо те, кто согрешили, таят особую силу внутри.<br/>
-
-Следует помнить эти 14 фраз: Винтовая лестница, Жук-Носорог, Город-Призрак, Персиковый Пирог, Жук-Носорог, Виа Долороза, <br/>
-Жук-Носорог, Точка Сингулярности, Джотто, Ангел, Гортензия, Жук-Носорог, Точка Сингулярности, Тайный Император<br/>
-
-Наконец, нужно подходящее место. 28 градусов, 24 минуты Северной широты, 80 градусов, 36 минут Западной долготы.<br/>
-
-Иди туда, и ожидай прихода Новой Луны<br/>
-
-Тогда ты и достигнешь Рая</p>
-
-        </div>
+            {!food && (
+                <div>
+                    <label>What is your favorite food {user}?</label>
+                    <input 
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    />
+                    <button onClick={() => setFood(name)}>Save</button>
+                </div>
+            )}
+        </form>
     );
 };
 

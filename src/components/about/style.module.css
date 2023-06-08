@@ -1,7 +1,28 @@
 .container {
-    background-color: dodgerblue;
+    background-color: orange;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.chat {
+    width: 500px;
+    height: 700px;
+    border: 5px solid black;
+    background-color: blanchedalmond;
+    font-size: 30px;
+    overflow-y: scroll;
+}
+.chat::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .chat::-webkit-scrollbar-track {
+    background-color: blanchedalmond;
+  }
+  
+  .chat::-webkit-scrollbar-thumb {
+    background-color: #888;
+  }
+
