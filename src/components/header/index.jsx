@@ -11,6 +11,7 @@ const Header = () => {
             <li><Link className={styles.decor} to='/about-me'>Чат</Link></li>
             <li><Link className={styles.decor} to='/heaven'>Любимая еда</Link></li>
             <li><Link className={styles.decor} to='/time'>Время</Link></li>
+            <li><Link className={styles.decor} to='/smart'>Умный дом</Link></li>
         </ul>
     </div>
     );
